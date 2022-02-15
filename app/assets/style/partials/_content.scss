@@ -1,0 +1,136 @@
+
+
+
+section {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  // max-width: 1100px;
+  .content {
+    max-width: 518px;
+    p {
+      padding-top: 30px;
+      
+    }
+    div {
+      padding-top: 45px;
+    }
+  }
+  img {
+    width: 605px;
+    margin-right: -15px;
+  }
+}
+.start-bloc {
+  display: flex;
+  align-items: center;
+  button {
+    padding: 15px 40px;
+    font-size: 1rem;
+    margin-right: 30px;
+  }
+  .fa-caret-right{
+    // padding-top: 10px;
+  }
+  .fa-caret-right:before {
+    content: "\f0da";
+    font-size: 2rem;
+    color: $primary-color;
+  }
+  a {
+    color: $primary-color;
+    padding-left: 9px;
+    font-weight: 600;
+  }
+}
+// Section 2 tools-bloc
+.tools-bloc{
+  display: block;
+  margin-top: 120px;
+  h2{
+    width: 55%;
+    text-align: center;
+    margin: auto;
+  }
+  .quality div {
+    display: inline-block;
+    width: 23%;
+    margin-right: 20px;
+    background-color: palevioletred;
+    
+    
+
+  }
+  .quality > span {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #7752BE;
+    border-radius: 19px;
+  }
+}
+
+// Section 3 design-pro
+.design-pro {
+  margin-top: 120px;
+}
+// Section 4 product-man
+.product-man {
+  margin-top: 120px;
+}
+// Section 5 marketers
+.marketers {
+  margin-top: 120px;
+}
+// Section 5 need-hero
+.need-hero {
+  margin-top: 120px;
+}
+// Section 5 mark-strate
+.mark-strate {
+  margin-top: 120px;
+}
+
+// 打勾 list
+.list-tick {
+  background-color: yellow;
+  display: block;
+  width: 235px;
+  height: 235px;
+}
+.list-tick li:before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin-top: -27px;
+  border-radius: 10px;
+  background-color: $primary-color;
+color:red;
+
+}
+
+// section 7 Carrousel
+.blogs-list {
+  font-weight: 400;
+  .blog {
+    max-width: 348px;
+    img {
+      height: 185px;
+    }
+    span {
+      font-weight: 700;
+    }
+  
+  }
+}
+
+// test section testcarousel
+.testcarousel{
+  margin-top: 100px;
+  width: 100%;
+
+}
+#carouselExampleCaptions {
+  width: 1100px;
+}

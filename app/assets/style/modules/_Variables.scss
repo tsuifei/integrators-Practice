@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Sacramento&display=swap');
+
+// 顏色變數
+$primary-color:#FF9900; // Orange
+$dark-color:#2F281E; // title
+$font-color:#544837; // font
+$light-color:#544837; // font
+$black-color:#000;
+$white-color: #fff;
+
+// 字體變數
+$font-base: "Poppins", Arial,sans-serif;
+
+// 網頁寬度
+$wrap-max-width:1400px;
+$content-width: 100%;
+
+// Link 連結樣式
+@mixin link {
+  &:link, &:visited {
+    @content;
+  }
+}
+@mixin link-hover { // 被點擊後的樣式
+  &:hover, &:active, &.active {
+    @content;
+  }
+}

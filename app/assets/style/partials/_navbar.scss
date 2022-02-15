@@ -1,0 +1,220 @@
+main {
+  width: 100%;
+  margin: auto;
+  @include rwd($desktop) {
+    max-width: $wrap-max-width;
+  }
+}
+.navbar {
+  
+}
+
+$content-width: 100%;
+// $breakpoint: 799px;
+$nav-height: 70px;
+
+.navigation {
+  // height: $nav-height;
+  // @include rwd($tablet) {
+  //   width: 75%;
+  // }
+}
+// Container with no padding for navbar
+.nav-container {
+  max-width: $content-width;
+  margin: 0 auto;
+  @include rwd($desktop) {
+    width: 100%;
+  }
+}
+
+// Navigation 
+nav {
+  ul {
+    // outline: 1px solid olivedrab;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      position: relative;
+      border-right: 1px solid $black-color;
+      a,
+      a:visited {
+        padding: 20px 20px;
+        outline: 1px solid orangered;
+        display: block;
+        // line-height: 50px;
+        background: $white-color;
+        color: $black-color;
+        text-decoration: none;
+        &:hover {
+          background: $primary-color;
+          color: $black-color;
+        }
+        &:not(:only-child):after {
+          padding-left: 4px;
+          content: ' ▾';
+        }
+      } // Dropdown list
+      ul li {
+        min-width: 190px;
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  @include rwd($desktop){
+    ul li {
+      display: inline-block;
+      a,
+      a:visited {
+        padding: 15px 10px;
+      }
+    }
+  }
+  @include rwd($desktop){
+    ul li {
+      display: inline-block;
+    }
+  }
+}
+
+// Dropdown list binds to JS toggle event
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  ul li a {
+    border-right: 0px solid $black-color;
+  }
+}
+
+/* Mobile navigation */
+
+// Binds to JS Toggle
+.nav-mobile {
+  // Hamburger nav visible on mobile only
+  display: block;
+
+  nav {
+    width: 100%;
+    padding: $nav-height 0 15px;
+    ul {
+      display: none;
+      li {
+        // float: none;
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+        ul li a {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+  .nav-dropdown {
+    position: static;
+  }
+  @include rwd($desktop) {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $white-color;
+    // height: $nav-height;
+    width: $nav-height;
+  }
+}
+
+.nav-list {
+  // display: block;
+  display: none;
+  display: flex;
+  background-color: $white-color;
+  flex-direction: column;
+  @include rwd($desktop) {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}  
+
+#nav-toggle {
+  position: absolute;
+  left: 16px;
+  top: 100px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+  span,
+  span:before,
+  span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: $black-color;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+  }
+  span:before {
+    top: -10px;
+  }
+  span:after {
+    bottom: -10px;
+  }
+  &.active span {
+    background-color: transparent;
+    &:before,
+    &:after {
+      top: 0;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+// Page content 
+// article {
+//   max-width: $content-width;
+//   margin: 0 auto;
+//   padding: 10px;
+// }
+
+// search-content
+.search-content {
+  position: relative;
+  margin: 7px 10px;
+  // line-height: 30px;
+  width: 100%;
+  @include rwd($desktop) {
+    width: 25%;
+  }
+  input {
+    width: 90%;
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+    background: #ffffff url("../../dist/imgs/search.png") no-repeat right 10px top 10px;
+  }
+  button {
+    position: absolute;
+    background: transparent;
+    top: 9px;
+    right: 30px;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+}
