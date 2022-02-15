@@ -51,7 +51,9 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  color: #544837; }
+  color: #544837;
+  font-weight: 600;
+  line-height: 1.8rem; }
   h3 :hover {
     color: #FF9900; }
 
@@ -319,13 +321,14 @@ section {
   align-items: center; }
   section .content {
     max-width: 518px; }
-    section .content p {
-      padding-top: 30px; }
     section .content div {
       padding-top: 45px; }
   section img {
     width: 605px;
     margin-right: -15px; }
+
+.open-content p {
+  padding-top: 30px; }
 
 .start-bloc {
   display: flex;
@@ -345,27 +348,46 @@ section {
 
 .tools-bloc {
   display: block;
-  margin-top: 120px; }
+  margin-top: 120px;
+  text-align: center; }
   .tools-bloc h2 {
     width: 55%;
-    text-align: center;
     margin: auto; }
-  .tools-bloc .quality div {
-    display: inline-block;
-    width: 23%;
-    margin-right: 20px;
-    background-color: palevioletred; }
-  .tools-bloc .quality > span {
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: #7752BE;
-    border-radius: 19px; }
+  .tools-bloc p {
+    padding-top: 13px; }
+
+.quality {
+  margin: auto;
+  margin-top: 50px;
+  padding-bottom: 20px; }
+
+.quality div {
+  text-align: left;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 22%;
+  margin-right: 20px; }
+
+.quality span {
+  margin-bottom: 30px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #7752BE;
+  border-radius: 19px;
+  padding-top: 15px;
+  text-align: center; }
+  .quality span i::before {
+    color: #fff;
+    width: 18px;
+    height: 18px; }
 
 .design-pro {
   margin-top: 120px; }
   .design-pro img {
     padding-left: 100px; }
+  .design-pro .design-list p {
+    padding-top: 22px; }
 
 .product-man {
   margin-top: 120px; }
