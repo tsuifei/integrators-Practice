@@ -102,13 +102,13 @@ section {
 }
 // Section 5 mark-strate
 .mark-strate {
-  display: flex;
+  display: block;
   margin-top: 120px;
   .blogs-list{
     // display: flex;
   }
   .blog{
-    width: 30%;
+    // width: 30%;
   }
 }
 
