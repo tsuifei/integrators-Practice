@@ -364,18 +364,30 @@ section {
 
 .design-pro {
   margin-top: 120px; }
+  .design-pro img {
+    padding-left: 100px; }
 
 .product-man {
   margin-top: 120px; }
+  .product-man img {
+    padding-right: 100px; }
 
 .marketers {
   margin-top: 120px; }
+  .marketers img {
+    padding-left: 100px; }
 
 .need-hero {
   margin-top: 120px; }
+  .need-hero .persion-img {
+    width: 98px;
+    height: 98px; }
 
 .mark-strate {
+  display: flex;
   margin-top: 120px; }
+  .mark-strate .blog {
+    width: 30%; }
 
 .list-tick {
   background-color: yellow;
